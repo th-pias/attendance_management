@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  date: 2016-06-26
+  intime: 2016-06-26 10:45:20
+  outtime: 2016-06-26 10:45:20
+  duration: 1.5
+  user_id: 1
+
+two:
+  message: MyText
+  date: 2016-06-26
+  intime: 2016-06-26 10:45:20
+  outtime: 2016-06-26 10:45:20
+  duration: 1.5
+  user_id: 1

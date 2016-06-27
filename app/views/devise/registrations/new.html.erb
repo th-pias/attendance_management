@@ -1,0 +1,43 @@
+<div class="row session-section">
+  <div class="col-md-6 col-md-offset-3 form-section">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name),html:{class:'form-vertical'}) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="form-group">
+          <%= f.label :first_name, for: "firstname" %><br />
+          <%= f.text_field :first_name, autofocus: true, class: 'form-control', id: "firstname"  %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name, for: "lastname" %><br />
+          <%= f.text_field :last_name, autofocus: true, class: 'form-control', id: "lastname" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, for: "email" %><br />
+          <%= f.email_field :email, autofocus: true, class: 'form-control', id: "email" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, for: "password" %>
+          <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control', id: "password" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password_confirmation, for: "passconfirm" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', id: "passconfirm" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "btn btn-success" %>
+        </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+
+  </div>
+</div>
+
+
